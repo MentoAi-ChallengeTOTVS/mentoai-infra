@@ -25,20 +25,20 @@ services:
     # restart: unless-stopped
 
 
-  # frontend:
-  #   build:
-  #     context: ../mentoai-frontend
-  #     dockerfile: Dockerfile
+  frontend:
+    build:
+      context: ../mentoai-frontend
+      dockerfile: Dockerfile
 
-  #     args:
-  #       NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL}
+      args:
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL}
 
-  #   container_name: mentoai-frontend
+    container_name: mentoai-frontend
 
-  #   ports:
-  #     - "3000:3000"
+    ports:
+      - "3000:3000"
 
-  #   depends_on:
-  #     - backend
+    depends_on:
+      - backend
 
   #   restart: unless-stopped
